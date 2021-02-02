@@ -9,7 +9,7 @@ class App extends React.Component {
 
     this.state = {
       todoInput: "",
-      todos: [{ id: "", name: "" }],
+      todos: [],
     };
   }
 
@@ -18,7 +18,7 @@ class App extends React.Component {
     this.setState({ todoInput: value });
     console.log(value);
   };
-
+  //working add todo
   addTodoHandler = () => {
     const id = Math.floor(Math.random() * 100) + 1;
     const { todoInput, todos } = this.state;
@@ -29,13 +29,25 @@ class App extends React.Component {
     });
   };
 
-  //working delete button
+  //working delete todo
   deleteTodoHandler = (id) => {
     const todos = this.state.todos.filter((todo) => todo.id !== id);
     this.setState({ todos });
-    console.log()
+    console.log(id)
     
   };
+
+  completeTodoHandler = () => {
+    // const todos = this.state.todos.map((item) =>{
+    //   if(item.id === todo.id){
+    //     return{
+    //       ...item, completed: !item.completed
+    //     }
+    //   }
+    // })
+    
+    // this.setState({todos})
+  }
 
   render() {
     return (

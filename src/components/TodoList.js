@@ -6,7 +6,7 @@ const TodoList = ({ todoInfo, deleteTodoHandler }) => {
     <div>
       <ul>
         {todoInfo.map((data) => (
-          <Todo deleteTodoHandler={deleteTodoHandler} key={data.id} text={data.name} />
+          <Todo deleteTodoHandler={deleteTodoHandler} key={data.id} dataId={data.id} text={data.name} />
         ))}
       </ul>
     </div>
