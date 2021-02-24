@@ -38,13 +38,15 @@ class App extends React.Component {
   };
 
   completeTodoHandler = () => {
-    // const todos = this.state.todos.map((item) =>{
-    //   if(item.id === todo.id){
+    // const todos = this.state.todos.map((todo) => {
+    //   if(todo.id === todo.id){
     //     return{
     //       ...item, completed: !item.completed
     //     }
     //   }
-    // })
+    //   return item;
+    // }))
+    
     
     // this.setState({todos})
   }
